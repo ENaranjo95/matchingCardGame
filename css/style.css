@@ -1,0 +1,110 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #000;
+     font-size: 12px;
+     line-height: 1.4;
+     font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* Center the container */
+#container {
+	width: 960px;
+	margin: auto;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.card{
+  background-image: url('../img/back.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 16%;
+  margin: 30px 2%;
+  float: left;
+}
+
+#restart{
+  cursor: pointer;
+}
+
+span:hover{
+  background-color: lightgrey;
+  height: 40px;
+  width: 60px;
+}
+
+#modal{
+  display: none;
+}
+
+#modal.show{
+  display: inline-block;
+  position:fixed;
+  background: white;
+  width: 80%;
+  height: 500px;
+  padding: 1.5em 1em 1em 1em;
+  border-radius: 10px;
+  border: 1px solid black;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index: 4;
+  max-width: 540px;
+  font-size: 20px;
+  color: black;
+  overflow: scroll;
+}
